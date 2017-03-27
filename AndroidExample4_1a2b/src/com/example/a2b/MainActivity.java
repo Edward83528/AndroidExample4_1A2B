@@ -74,6 +74,7 @@ public class MainActivity extends Activity {
 				for (int j = 0; j < i; j++) {
 					if (temp == number[j]) {
 						check = true;
+						break;
 					}
 				}
 			} while (check);
