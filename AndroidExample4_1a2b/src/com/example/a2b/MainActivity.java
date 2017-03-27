@@ -25,7 +25,6 @@ public class MainActivity extends Activity {
 		answer = creatanswer(3);
 	}
 
-	
 	void findview() {
 		b1 = (Button) findViewById(R.id.button1);
 		b2 = (Button) findViewById(R.id.button2);
@@ -38,7 +37,6 @@ public class MainActivity extends Activity {
 		b2.setOnClickListener(c2);
 	}
 
-	
 	// 第二個button的監聽器 放棄
 	OnClickListener c1 = new OnClickListener() {
 		@Override
@@ -73,10 +71,12 @@ public class MainActivity extends Activity {
 			do {
 				check = false;
 				temp = (int) (Math.random() * 9) + 1;
+				for (int j = 0; j < i; j++) {
+					if (temp == number[j]) {
+						check = true;
+					}
+				}
 			} while (check);
-			if (temp == number[i]) {
-				check = true;
-			}
 			number[i] = temp;
 		}
 		String s = "";
